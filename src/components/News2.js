@@ -84,7 +84,7 @@ export class News2 extends Component {
                                         source={e.source}
                                         title={e.title ? e.title.slice(0, 50) : "NO Title"}
                                         description={e.description ? e.description.slice(0, 95) : "NO description"}
-                                        imageUrl={e.image || "https://via.placeholder.com/150"}
+                                        imageUrl={e.image}
                                         newsUrl={e.url}
                                         publishDate={e.published_at ? e.published_at.slice(0, 19).replace('T', ' ') : "No Dates Available"}
                                         mode={this.props.mode}
