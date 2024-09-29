@@ -5,6 +5,9 @@ import Navbar from './components/Navbar';
 import News2 from './components/News2';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
+import Login from './components/Auth/Login';
+import SignUp from './components/Auth/SignUp';
+import SavedNews from './components/SavedNews';
 
 
 
@@ -42,6 +45,9 @@ toggleMode = () => {
           progress={this.state.progress}
         />
         <Routes>
+          <Route path='/login' element={<Login mode={this.state.mode}/>} />
+          <Route path='/savedNews' element= {<SavedNews mode={this.state.mode}/>}/>
+          <Route path='/register' element={<SignUp mode={this.state.mode}/>} />
           <Route path='/' element={<News2 setProgress={this.setprogress} apikey={this.state.apikey} key='general' mode={this.state.mode} pageSize={9} country={'in'} category={"general"}/>}/>
           <Route path='/business' element={<News2 setProgress={this.setprogress} apikey={this.state.apikey} key='business' mode={this.state.mode} pageSize={9} country={'in'} category={"business"}/>}/>
           <Route path='/entertainment' element={<News2 setProgress={this.setprogress} apikey={this.state.apikey} key='entertainment' mode={this.state.mode} pageSize={9} country={'in'} category={"entertainment"}/>}/>
