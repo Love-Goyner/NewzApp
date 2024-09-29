@@ -24,7 +24,11 @@ export class News2 extends Component {
             articles: [],
             loading: true,
             totalResult: 0,
+<<<<<<< HEAD
             offset: 0
+=======
+            offset: 0 // Added for mediastack's pagination
+>>>>>>> e12fb4e09db42e3730e7d20f234921041a3b9444
         }
     }
 
